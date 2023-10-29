@@ -2,6 +2,7 @@ import "@mantine/core/styles.css";
 import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
 import { theme } from "@/theme";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }: any) {
   return (
@@ -15,6 +16,7 @@ export default function App({ Component, pageProps }: any) {
         <link rel="shortcut icon" href="/counterstrike_ie.svg" />
       </Head>
       <Component {...pageProps} />
+      <Analytics />
     </MantineProvider>
   );
 }
